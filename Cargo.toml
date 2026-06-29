@@ -1,0 +1,10 @@
+[package]
+name = "TP1_Pascale_Mercier"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[[bin]]
+name = "TP1_Pascale_Mercier"
+path = "main.rs"

@@ -4,18 +4,12 @@ pub enum Statut {
     Emprunte,
 }
 
-pub trait Affichable {
-    fn vers_chaine(&self) -> String;
+pub trait Description {
+    fn obtenir_resume(&self) -> String;
 }
 
-impl Affichable for Statut {
-    fn vers_chaine(&self) -> String {
-        match self {
-            Statut::Disponible => String::from("Disponible"),
-            Statut::Emprunte => String::from("Emprunté"),
-        }
-    }
-}
+
+
 
 #[derive(Debug, Clone)]
 pub struct Livre {
