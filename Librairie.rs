@@ -24,3 +24,13 @@ pub struct Livre {
     pub annee: u32,
     pub statut: Statut,
 }
+
+impl Description for Livre {
+    fn obtenir_resume(&self) -> String {
+        let statut_str = match self.statut {
+            Statut::Disponible => "Disponible",
+            Statut::Emprunte => "Emprunté",
+        };
+        format!("'{}' par {} ({}) - [Statut: {}]", self.titre, self.auteur, self.annee, statut_str)
+    }
+}
