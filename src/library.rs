@@ -8,9 +8,6 @@ pub trait Description {
     fn obtenir_resume(&self) -> String;
 }
 
-
-
-
 #[derive(Debug, Clone)]
 pub struct Livre {
     pub titre: String,
